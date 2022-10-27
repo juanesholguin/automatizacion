@@ -15,7 +15,7 @@ public class GitHubPage extends BasePage{
 
     public void navigateToGithub() {
 
-        navigateTo("https://github.com/login");
+        navigateTo("https://www.demoblaze.com/index.html");
     }
 
     public void enterUser(String user) {

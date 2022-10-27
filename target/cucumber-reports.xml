@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="14.685">
-    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly" time="14.384">
-        <failure message="Expected condition failed: waiting for visibility of element located by By.xpath: //header/div[7]/details[1]/summary[1]/img[1] (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[Given the user navigates to www.github.com/login............................passed
-When the user enter your yulianavelres@gmail.com and PruebasAuto123!........passed
-And click in the Sig in button and see de home page.........................passed
-Then the user close session correctly.......................................failed
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="13.479">
+    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly" time="13.196">
+        <failure message="Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id='login_field'] (tried for 10 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[Given the user navigates to www.github.com/login............................passed
+When the user enter your yulianavelres@gmail.com and PruebasAuto123!........failed
+And click in the Sig in button and see de home page.........................skipped
+Then the user close session correctly.......................................skipped
 
 StackTrace:
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //header/div[7]/details[1]/summary[1]/img[1] (tried for 10 second(s) with 500 milliseconds interval)
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@id='login_field'] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at pages.BasePage.find(BasePage.java:46)
-	at pages.BasePage.clickElement(BasePage.java:52)
-	at pages.GitHubPage.closeSession(GitHubPage.java:37)
-	at steps.GitHubStep.closeSessionGitHub(GitHubStep.java:34)
-	at ✽.the user close session correctly(file:///home/juanes/Documents/university/Pruebas/TestGithubAuto/src/test/resources/features/GitHub.feature:8)
+	at pages.BasePage.write(BasePage.java:56)
+	at pages.GitHubPage.enterUser(GitHubPage.java:23)
+	at steps.GitHubStep.enterCredentials(GitHubStep.java:22)
+	at ✽.the user enter your yulianavelres@gmail.com and PruebasAuto123!(file:///home/juanes/Documents/university/Pruebas/TestGithubAuto/src/test/resources/features/GitHub.feature:6)
 Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=106.0.5249.119)
 Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
 System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d78138adc5b4573f6cadf4f132d8fc29, findElement {using=xpath, value=//header/div[7]/details[1]/summary[1]/img[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0MBl1S}, goog:chromeOptions: {debuggerAddress: localhost:37537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37537/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d78138adc5b4573f6cadf4f132d8fc29
+Command: [0674456a2d31746e2fcbc45216325220, findElement {using=xpath, value=//input[@id='login_field']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0XTd75}, goog:chromeOptions: {debuggerAddress: localhost:39265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39265/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0674456a2d31746e2fcbc45216325220
 	at jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -43,9 +43,9 @@ Session ID: d78138adc5b4573f6cadf4f132d8fc29
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
 	at pages.BasePage.find(BasePage.java:46)
-	at pages.BasePage.clickElement(BasePage.java:52)
-	at pages.GitHubPage.closeSession(GitHubPage.java:37)
-	at steps.GitHubStep.closeSessionGitHub(GitHubStep.java:34)
+	at pages.BasePage.write(BasePage.java:56)
+	at pages.GitHubPage.enterUser(GitHubPage.java:23)
+	at steps.GitHubStep.enterCredentials(GitHubStep.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -127,8 +127,8 @@ Session ID: d78138adc5b4573f6cadf4f132d8fc29
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 ]]></failure>
     </testcase>
-    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly 2" time="0.017">
-        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=106.0.5249.119)&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d78138adc5b4573f6cadf4f132d8fc29, get {url=https://github.com/login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0MBl1S}, goog:chromeOptions: {debuggerAddress: localhost:37537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37537/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d78138adc5b4573f6cadf4f132d8fc29" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given the user navigates to www.github.com/login............................failed
+    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly 2" time="0.038">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=106.0.5249.119)&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0674456a2d31746e2fcbc45216325220, get {url=https://www.demoblaze.com/index.html}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0XTd75}, goog:chromeOptions: {debuggerAddress: localhost:39265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39265/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0674456a2d31746e2fcbc45216325220" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given the user navigates to www.github.com/login............................failed
 When the user enter your yulianavelres@gmail.com and HolaMundo..............skipped
 And click in the Sig in button and see de home page.........................skipped
 Then the user close session correctly.......................................skipped
@@ -140,9 +140,9 @@ from unknown error: web view not found
 Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
 System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d78138adc5b4573f6cadf4f132d8fc29, get {url=https://github.com/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0MBl1S}, goog:chromeOptions: {debuggerAddress: localhost:37537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37537/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d78138adc5b4573f6cadf4f132d8fc29
+Command: [0674456a2d31746e2fcbc45216325220, get {url=https://www.demoblaze.com/index.html}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0XTd75}, goog:chromeOptions: {debuggerAddress: localhost:39265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39265/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0674456a2d31746e2fcbc45216325220
 	at jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -161,8 +161,8 @@ Session ID: d78138adc5b4573f6cadf4f132d8fc29
 	at ✽.the user navigates to www.github.com/login(file:///home/juanes/Documents/university/Pruebas/TestGithubAuto/src/test/resources/features/GitHub.feature:5)
 ]]></failure>
     </testcase>
-    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly 3" time="0.025">
-        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=106.0.5249.119)&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d78138adc5b4573f6cadf4f132d8fc29, get {url=https://github.com/login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0MBl1S}, goog:chromeOptions: {debuggerAddress: localhost:37537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37537/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d78138adc5b4573f6cadf4f132d8fc29" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given the user navigates to www.github.com/login............................failed
+    <testcase classname="Login user page GitHub" name="SigIn session in the page Github correctly 3" time="0.023">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=106.0.5249.119)&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0674456a2d31746e2fcbc45216325220, get {url=https://www.demoblaze.com/index.html}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0XTd75}, goog:chromeOptions: {debuggerAddress: localhost:39265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39265/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0674456a2d31746e2fcbc45216325220" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given the user navigates to www.github.com/login............................failed
 When the user enter your PruebasAuto123! and yulianavelres@gmail.com........skipped
 And click in the Sig in button and see de home page.........................skipped
 Then the user close session correctly.......................................skipped
@@ -174,9 +174,9 @@ from unknown error: web view not found
 Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
 System info: host: 'juanesPc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-52-generic', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d78138adc5b4573f6cadf4f132d8fc29, get {url=https://github.com/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0MBl1S}, goog:chromeOptions: {debuggerAddress: localhost:37537}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37537/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d78138adc5b4573f6cadf4f132d8fc29
+Command: [0674456a2d31746e2fcbc45216325220, get {url=https://www.demoblaze.com/index.html}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /tmp/.com.google.Chrome.0XTd75}, goog:chromeOptions: {debuggerAddress: localhost:39265}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39265/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0674456a2d31746e2fcbc45216325220
 	at jdk.internal.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
