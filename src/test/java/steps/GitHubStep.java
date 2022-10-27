@@ -19,6 +19,7 @@ public class GitHubStep {
 
     @When("^the user enter your (.+) and (.+)$")
     public void enterCredentials(String user, String pass){
+        git.clickSigInButton();
         git.enterUser(user);
         git.enterPassword(pass);
     }
@@ -26,11 +27,12 @@ public class GitHubStep {
     @And("click in the Sig in button and see de home page")
     public void enterToGitHub(){
 
-        git.clickSigInButton();
+        git.clickLogInButton();
     }
 
     @Then("the user close session correctly")
     public void closeSessionGitHub(){
+
         git.closeSession();
     }
 }
