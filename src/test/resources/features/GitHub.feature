@@ -9,6 +9,6 @@ Feature: Login user page GitHub
 
     Examples:
       |user|                  |password|
-      |yulianavelres@gmail.com||PruebasAuto123!|
-      |yulianavelres@gmail.com||HolaMundo|
-      |PruebasAuto123!||yulianavelres@gmail.com|
+      |JuanesHolguin||123|
+      |otro||nada|
+      |123!||JuanesHolguin|
