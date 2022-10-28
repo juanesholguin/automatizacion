@@ -4,12 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.GitHubPage;
+import pages.DemaBlazePage;
 
 
 public class GitHubStep {
 
-    GitHubPage git = new GitHubPage();
+    DemaBlazePage git = new DemaBlazePage();
 
     @Given("^the user navigates to www.github.com/login$")
     public void navigateToGitHub(){

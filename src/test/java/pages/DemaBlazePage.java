@@ -1,6 +1,6 @@
 package pages;
 
-public class GitHubPage extends BasePage{
+public class DemaBlazePage extends BasePage{
 
     private String userTextField = "/html/body/div[3]/div/div/div[2]/form/div[1]/input";
     private String passwordTextField = "/html/body/div[3]/div/div/div[2]/form/div[2]/input";
@@ -9,7 +9,7 @@ public class GitHubPage extends BasePage{
     private String signOutButton = "/html/body/nav/div[1]/ul/li[6]/a";
 
 
-    public GitHubPage() {
+    public DemaBlazePage() {
         super(driver);
     }
 
