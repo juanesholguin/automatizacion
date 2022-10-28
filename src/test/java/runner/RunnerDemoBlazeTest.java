@@ -18,7 +18,7 @@ import pages.BasePage;
         tags = "@Test"
 )
 
-public class RunnerGitHubTest {
+public class RunnerDemoBlazeTest {
     @AfterClass
     public static void cleanDriver() {
 
