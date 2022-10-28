@@ -25,7 +25,7 @@ public class BasePage {
         System.setProperty("webdriver.chrome.driver", PATH_DRIVER + "chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public BasePage(WebDriver driver) {
